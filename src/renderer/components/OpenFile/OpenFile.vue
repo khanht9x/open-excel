@@ -10,6 +10,7 @@
 
 <script>
 const path = require('path')
+const app = require('electron').remote.app
 export default {
   name: 'open-file',
   data () {
@@ -24,6 +25,7 @@ export default {
   mounted () {
     this.path = path.join(path.dirname(__dirname), '../../extraResources/yunxi-excel.xlsx')
     this.open(this.path)
+    console.log(app.getAppPath())
   }
 }
 </script>
