@@ -31,7 +31,6 @@ export default {
     this.pathCopy = path.join(path.dirname(__dirname), '../../../yunxi-excel.xlsx')
     fs.copyFile(this.pathExcel, this.pathCopy, (err) => {
       if (err) throw err
-      console.log('yunxi-excel.xlsx was copied to destination.txt')
     })
   }
 }
